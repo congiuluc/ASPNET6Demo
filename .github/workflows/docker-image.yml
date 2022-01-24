@@ -25,7 +25,7 @@ jobs:
       run: dir /home/runner/work/ASPNET6Demo/ASPNET6Demo/ASPNET6Demo/
       
     - name: Build the Docker image
-      run: docker build . -f /home/runner/work/ASPNET6Demo/ASPNET6Demo/ASPNET6Demo/Dockerfile --tag ${{secrets.DOCKER_USERNAME}}/aspnet6demo:$(date +%s)
+      run: docker build . -f /home/runner/work/ASPNET6Demo/ASPNET6Demo/ASPNET6Demo/Dockerfile --tag congiuluc/aspnet6demo:$(date +%s)
       
     - name: Docker Push
-      run: docker push ${{secrets.DOCKER_USERNAME}}/aspnet6demo
+      run: docker push congiuluc/aspnet6demo
