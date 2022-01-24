@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "aspnet6demoaks-b8d7"
+    labels:
+        app: "aspnet6demoaks-b8d7"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: aspnet6demoaks9b4f-aspnet6demoaks-b8d7.4820120e476f4caab162.westeurope.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "aspnet6demoaks-b8d7"
+                servicePort: 80
